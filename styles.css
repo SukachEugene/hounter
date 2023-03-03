@@ -1258,7 +1258,7 @@ footer {
 .color-spot-four1 {
     position: absolute;
     margin-top: -200px;
-    margin-left: 70vw;
+    margin-left: 75vw;
 
 }
 
@@ -1290,6 +1290,28 @@ header .header-links {
 
 
 
+
+
+
+.slider-four {
+    overflow: hidden !important;
+}
+
+
+.slaider-four-element {
+    width: 42vw !important;
+    margin: 0 1vw !important;
+}
+
+.slaider-four-element-bacground-image img {
+    width: 100% !important;
+}
+
+
+
+
+
+
 .slider-test {
     width: 100vw;
 }
@@ -1298,7 +1320,12 @@ header .header-links {
     width: 30%;
 } */
 
-
-.slider-test-element img{
-    width: 400px
+.slick-slide {
+    width: 50vw;
+    overflow: hidden;
+    margin: 0 1vw;
 }
+
+/* .slider-test-element img{
+    width: 400px
+} */

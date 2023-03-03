@@ -57,10 +57,10 @@ $(document).ready(function(){
   $('.slider-four').slick({
     centerMode: true,
     infinite: false,
-    centerPadding: '-5vw',
+    centerPadding: '25%',
     initialSlide: 1,
  
-    slidesToShow: 2.,
+    slidesToShow: 1.,
     dots: true,
   });
           
@@ -69,10 +69,11 @@ $(document).ready(function(){
 
 
   $('.slider-test').slick({
+    variableWidth: true,
     centerMode: true,
     // infinite: false,
     slidesToShow: 3,
-    centerPadding: '60px',
+    centerPadding: '8vw',
     initialSlide: 2,
     // variableWidth: true,
     dots: true,
