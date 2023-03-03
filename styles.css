@@ -326,7 +326,6 @@ h1 span {
 .slider-one {
     display: flex;
     justify-content: space-around;
-    /* margin-left: 3vw; */
     position: relative;
     margin-top: 460px;
 }
