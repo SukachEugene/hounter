@@ -55,12 +55,12 @@ $(document).ready(function(){
 
 
   $('.slider-four').slick({
+    variableWidth: true,
     centerMode: true,
     infinite: false,
-    centerPadding: '-5vw',
-    initialSlide: 1,
- 
-    slidesToShow: 2.,
+    slidesToShow: 3,
+    centerPadding: '8vw',
+    initialSlide: 2,
     dots: true,
   });
           
@@ -69,11 +69,12 @@ $(document).ready(function(){
 
 
   $('.slider-test').slick({
+    variableWidth: true,
     centerMode: true,
-    // infinite: false,
+    infinite: false,
     slidesToShow: 3,
-    centerPadding: '60px',
-    initialSlide: 2,
+    centerPadding: '8vw',
+    initialSlide: 1,
     // variableWidth: true,
     dots: true,
     // arrows: false,
