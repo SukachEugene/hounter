@@ -2,10 +2,10 @@
 $(document).ready(function(){
     $('.slider-one').slick({
       slide: '.slider-one-element',
-      slidesToShow: 2.5,
+      slidesToShow: 3,
         arrows: false,
         dots: false,
-        infinite: false,
+        infinite: true,
         variableWidth: true,
 
     });
@@ -57,7 +57,7 @@ $(document).ready(function(){
   $('.slider-four').slick({
     variableWidth: true,
     centerMode: true,
-    infinite: false,
+    infinite: true,
     slidesToShow: 3,
     centerPadding: '8vw',
     initialSlide: 2,
@@ -68,15 +68,13 @@ $(document).ready(function(){
 
 
 
-  $('.slider-test').slick({
-    variableWidth: true,
-    centerMode: true,
-    infinite: false,
-    slidesToShow: 3,
-    centerPadding: '8vw',
-    initialSlide: 1,
-    // variableWidth: true,
-    dots: true,
-    // arrows: false,
-  });
+  // $('.slider-test').slick({
+  //   variableWidth: true,
+  //   centerMode: true,
+  //   infinite: false,
+  //   slidesToShow: 3,
+  //   centerPadding: '8vw',
+  //   initialSlide: 1,
+  //   dots: true,
+  // });
       

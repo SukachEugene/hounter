@@ -28,8 +28,13 @@ time, mark, audio, video {
 End of Eric Meyer's CSS Reset from https://meyerweb.com/eric/tools/css/reset/ 
 */
 
+html {
+    overflow-x: initial !important;
+  }
+
 html, body {
     max-width: 100%;
+    height: max-content;
     overflow-x: hidden;
     font-family: Lexend;
     text-align: left;
@@ -323,22 +328,23 @@ h1 span {
     justify-content: space-around;
     /* margin-left: 3vw; */
     position: relative;
-    margin-top: 510px;
+    margin-top: 460px;
 }
 
 .slider-one-element {
     background-color: white;
     /* min-height: 104px; */
     /* margin-right: 1vw; */
-    margin-left: 1.2vw;
+    margin-right: 2vw;
     border-radius: 32px;
     display: flex !important;
     align-items: center;
     flex-wrap: nowrap;
     position: relative;
     padding: 24px;
-    height: 104px !important;
+    max-height: 104px !important;
     /* width: min-content; */
+    transform: translate(2vw);
     
 }
 
@@ -696,16 +702,20 @@ h2 {
 
 .slider-four {
     margin-top: 40px;
+    width: 100vw;
 }
 
-/* .slaider-four-element {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 51.4vw;
-    position: relative;
-} */
+.slider-four .slick-slide {
+    width: 50vw;
+    /* overflow: hidden; */
+    margin: 0 1.9vw;
+}
+
+.slider-four .slick-slide img {
+    width: 100%;
+}
+
 
 .slaider-four-element-bacground-image {
     /* min-width: 51.4vw; */
@@ -1224,6 +1234,7 @@ footer {
 
 .color-spot-one {
     position: absolute;
+    margin-top: -50px;
 }
 
 .color-spot-two1 {
@@ -1273,6 +1284,9 @@ footer {
 
 
 
+
+
+
  /* ----------------- Adaptability rules ----------------- */
 
 header .company-logo {
@@ -1313,23 +1327,6 @@ header .header-links {
 
 
 
-.slider-four {
-    width: 100vw;
-}
-
-/* .slider-test-element {
-    width: 30%;
-} */
-
-.slider-four .slick-slide {
-    width: 50vw;
-    /* overflow: hidden; */
-    margin: 0 1.9vw;
-}
-
-.slider-four .slick-slide img {
-    width: 100%;
-}
 
 
 
