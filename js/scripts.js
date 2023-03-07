@@ -102,45 +102,79 @@ $('.left-scroll-button').on('click', function () {
 });
 
 
-let buttons = document.getElementsByClassName("slaider-two-filters-icon-svg");
 
-window.onclick = e => {
-  if (e.target.classList.contains("slider-two-button")) {
-    
-    if (e.target.classList.contains("active")) {
-      e.target.classList.remove('active');
-      e.target.querySelector('.active').classList.remove('active');
+
+
+let slider_buttons = document.getElementsByClassName("slider-two-button");
+
+for (i = 0; i < slider_buttons.length; i++) {
+  slider_buttons[i].addEventListener('click', getStyleToSliderButtons, false);
+}
+
+let slider_buttons_nav = document.getElementsByClassName("slider-two-button-nav");
+
+for (i = 0; i < slider_buttons_nav.length; i++) {
+  slider_buttons_nav[i].addEventListener('click', getStyleToSliderArrows, false);
+}
+
+let buttons = document.getElementsByClassName("slaider-two-filters-icon-svg");
+let arrows = document.getElementsByClassName("slaider-two-nav-arrows-icon-svg");
+
+
+
+function getStyleToSliderButtons() {
+  if (this.classList.contains("slider-two-button")) {
+
+    if (this.classList.contains("active")) {
+      this.classList.remove('active');
+      this.querySelector('.active').classList.remove('active');
     } else {
 
       elements = document.querySelectorAll('.active');
-      console.log(elements);
+      // console.log(elements);
       elements.forEach((element) => {
         element.classList.remove('active');
       });
 
-      e.target.classList.add('active');
-      e.target.querySelector('.slaider-two-filters-icon-svg').classList.add('active');
+      this.classList.add('active');
+      this.querySelector('.slaider-two-filters-icon-svg').classList.add('active');
     }
-  } else if (e.target.classList.contains("slider-two-button-nav")) {
-
-    if (!e.target.classList.contains("active")) {
-
-      elements = document.querySelectorAll('.active');
-      console.log(elements);
-      elements.forEach((element) => {
-        element.classList.remove('active');
-      });
-
-      e.target.classList.add('active');
-      e.target.querySelector('.slaider-two-nav-arrows-icon-svg').classList.add('active');
-    }
-  } else if (e.target.classList.contains("slaider-two-nav-arrows-icon-svg")) {
-    console.log ('AAA');
   }
+  // else if (this.classList.contains("slider-two-button-nav")) {
 
+  //   if (!this.classList.contains("active")) {
 
+  //     elements = document.querySelectorAll('.active');
+  //     // console.log(elements);
+  //     elements.forEach((element) => {
+  //       element.classList.remove('active');
+  //     });
+
+  //     this.classList.add('active');
+  //     this.querySelector('.slaider-two-nav-arrows-icon-svg').classList.add('active');
+  //   }
+  // }
 }
 
+function getStyleToSliderArrows() {
+  if (this.classList.contains("slider-two-button-nav")) {
+
+    if (!this.classList.contains("active")) {
+      console.log("AAAA")
+
+      for (i=0; i<slider_buttons_nav.length; i++){
+        slider_buttons_nav[i].classList.remove('active');
+      }
+
+      for (i=0; i<arrows.length; i++){
+        arrows[i].classList.remove('active');
+      }
+   
+      this.classList.add('active');
+      this.querySelector('.slaider-two-nav-arrows-icon-svg').classList.add('active');
+    }
+  }
+}
 
 
 
@@ -227,12 +261,38 @@ $('.slider-four').slick({
 
 
 
-  // $('.slider-test').slick({
-  //   variableWidth: true,
-  //   centerMode: true,
-  //   infinite: false,
-  //   slidesToShow: 3,
-  //   centerPadding: '8vw',
-  //   initialSlide: 1,
-  //   dots: true,
-  // });
+// $('.slider-test').slick({
+//   variableWidth: true,
+//   centerMode: true,
+//   infinite: false,
+//   slidesToShow: 3,
+//   centerPadding: '8vw',
+//   initialSlide: 1,
+//   dots: true,
+// });
+
+
+
+window.document.onkeydown = function (e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  window.scrollTo(0, 0);
+  document.getElementById('light').style.display = 'block';
+  document.getElementById('fade').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  document.getElementById('light').style.display = 'none';
+  document.getElementById('fade').style.display = 'none';
+  lightBoxVideo.pause();
+}
