@@ -1,159 +1,169 @@
 // ----------- Sliders -----------
 
-// $('.slider-one').slick({
-//   slide: '.slider-one-element',
-//   slidesToShow: 3,
-//   arrows: false,
-//   dots: false,
-//   infinite: true,
-//   variableWidth: true,
+$('.slider-one').slick({
+  slide: '.slider-one-element',
+  slidesToShow: 3,
+  arrows: false,
+  dots: false,
+  infinite: true,
+  variableWidth: true,
 
-// });
-
-
-
-
-// $('.slider-two').slick({
-//   slidesToShow: 3,
-//   slidesToScroll: 1,
-//   swipeToSlide: true,
-//   Infinity: true,
-//   variableWidth: true,
-//   initialSlide: 0,
-// });
-
-// var filter_house = true;
-// var filter_villa = false;
-// var filter_apartment = false;
-
-// $('.slider-two').slick('slickFilter', '.house');
-
-// $('.filter-house').on('click', function () {
-//   if (filter_house === false) {
-//     $('.slider-two').slick('slickUnfilter');
-//     $('.slider-two').slick('slickFilter', '.house');
-
-//     filter_house = true;
-//     filter_villa = false;
-//     filter_apartment = false;
-
-//   } else {
-
-//     $('.slider-two').slick('slickUnfilter');
-//     filter_house = false;
-//   }
-// });
-
-// $('.filter-villa').on('click', function () {
-//   if (filter_villa === false) {
-//     $('.slider-two').slick('slickUnfilter');
-//     $('.slider-two').slick('slickFilter', '.villa');
-
-//     filter_villa = true;
-//     filter_house = false;
-//     filter_apartment = false;
-
-//   }
-//   else {
-//     $('.slider-two').slick('slickUnfilter');
-//     filter_villa = false;
-//   }
-// });
-
-// $('.filter-apartment').on('click', function () {
-//   if (filter_apartment === false) {
-//     $('.slider-two').slick('slickUnfilter');
-//     $('.slider-two').slick('slickFilter', '.apartment');
-
-//     filter_apartment = true;
-//     filter_villa = false;
-//     filter_house = false;
-
-//   } else {
-//     $('.slider-two').slick('slickUnfilter');
-//     filter_apartment = false;
-//   }
-// });
-
-
-// $('.right-scroll-button').on('click', function () {
-//   $('.slider-two').slick('slickNext');
-// });
-
-// $('.left-scroll-button').on('click', function () {
-//   $('.slider-two').slick('slickPrev');
-// });
-
-
-// let slider_buttons = document.getElementsByClassName("slider-two-button");
-
-// for (i = 0; i < slider_buttons.length; i++) {
-//   slider_buttons[i].addEventListener('click', getStyleToSliderButtons, false);
-// }
-
-// let slider_buttons_nav = document.getElementsByClassName("slider-two-button-nav");
-
-// for (i = 0; i < slider_buttons_nav.length; i++) {
-//   slider_buttons_nav[i].addEventListener('click', getStyleToSliderArrows, false);
-// }
-
-// let buttons = document.getElementsByClassName("slaider-two-filters-icon-svg");
-// let arrows = document.getElementsByClassName("slaider-two-nav-arrows-icon-svg");
+});
 
 
 
-// function getStyleToSliderButtons() {
-//   if (this.classList.contains("slider-two-button")) {
 
-//     if (this.classList.contains("active")) {
-//       this.classList.remove('active');
-//       this.querySelector('.active').classList.remove('active');
+$('.slider-two').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  swipeToSlide: true,
+  Infinity: true,
+  variableWidth: true,
+  initialSlide: 0,
+});
 
-//     } else {
-//       elements = document.querySelectorAll('.active');
-//       // console.log(elements);
-//       elements.forEach((element) => {
-//         element.classList.remove('active');
-//       });
+var filter_house = true;
+var filter_villa = false;
+var filter_apartment = false;
 
-//       this.classList.add('active');
-//       this.querySelector('.slaider-two-filters-icon-svg').classList.add('active');
-//     }
-//   }
+$('.slider-two').slick('slickFilter', '.house');
 
-// }
+$('.filter-house').on('click', function () {
+  if (filter_house === false) {
+    $('.slider-two').slick('slickUnfilter');
+    $('.slider-two').slick('slickFilter', '.house');
 
-// function getStyleToSliderArrows() {
-//   if (this.classList.contains("slider-two-button-nav")) {
+    filter_house = true;
+    filter_villa = false;
+    filter_apartment = false;
 
-//     if (!this.classList.contains("active")) {
-//       console.log("AAAA")
+  } else {
 
-//       for (i = 0; i < slider_buttons_nav.length; i++) {
-//         slider_buttons_nav[i].classList.remove('active');
-//       }
+    $('.slider-two').slick('slickUnfilter');
+    filter_house = false;
+  }
+});
 
-//       for (i = 0; i < arrows.length; i++) {
-//         arrows[i].classList.remove('active');
-//       }
+$('.filter-villa').on('click', function () {
+  if (filter_villa === false) {
+    $('.slider-two').slick('slickUnfilter');
+    $('.slider-two').slick('slickFilter', '.villa');
 
-//       this.classList.add('active');
-//       this.querySelector('.slaider-two-nav-arrows-icon-svg').classList.add('active');
-//     }
-//   }
-// }
+    filter_villa = true;
+    filter_house = false;
+    filter_apartment = false;
+
+  }
+  else {
+    $('.slider-two').slick('slickUnfilter');
+    filter_villa = false;
+  }
+});
+
+$('.filter-apartment').on('click', function () {
+  if (filter_apartment === false) {
+    $('.slider-two').slick('slickUnfilter');
+    $('.slider-two').slick('slickFilter', '.apartment');
+
+    filter_apartment = true;
+    filter_villa = false;
+    filter_house = false;
+
+  } else {
+    $('.slider-two').slick('slickUnfilter');
+    filter_apartment = false;
+  }
+});
+
+
+$('.right-scroll-button').on('click', function () {
+  $('.slider-two').slick('slickNext');
+});
+
+$('.left-scroll-button').on('click', function () {
+  $('.slider-two').slick('slickPrev');
+});
+
+
+let slider_buttons = document.getElementsByClassName("slider-two-button");
+
+for (i = 0; i < slider_buttons.length; i++) {
+  slider_buttons[i].addEventListener('click', getStyleToSliderButtons, false);
+}
+
+let slider_buttons_nav = document.getElementsByClassName("slider-two-button-nav");
+
+for (i = 0; i < slider_buttons_nav.length; i++) {
+  slider_buttons_nav[i].addEventListener('click', getStyleToSliderArrows, false);
+}
+
+let buttons = document.getElementsByClassName("slaider-two-filters-icon-svg");
+let arrows = document.getElementsByClassName("slaider-two-nav-arrows-icon-svg");
 
 
 
-// $('.slider-four').slick({
-//   variableWidth: true,
-//   centerMode: true,
-//   infinite: true,
-//   slidesToShow: 3,
-//   centerPadding: '8vw',
-//   initialSlide: 2,
-//   dots: true,
-// });
+function getStyleToSliderButtons() {
+  if (this.classList.contains("slider-two-button")) {
+
+    if (this.classList.contains("active")) {
+      this.classList.remove('active');
+      this.querySelector('.active').classList.remove('active');
+
+    } else {
+      elements = document.querySelectorAll('.active');
+      // console.log(elements);
+      elements.forEach((element) => {
+        element.classList.remove('active');
+      });
+
+      this.classList.add('active');
+      this.querySelector('.slaider-two-filters-icon-svg').classList.add('active');
+    }
+  }
+
+}
+
+function getStyleToSliderArrows() {
+  if (this.classList.contains("slider-two-button-nav")) {
+
+    if (!this.classList.contains("active")) {
+      console.log("AAAA")
+
+      for (i = 0; i < slider_buttons_nav.length; i++) {
+        slider_buttons_nav[i].classList.remove('active');
+      }
+
+      for (i = 0; i < arrows.length; i++) {
+        arrows[i].classList.remove('active');
+      }
+
+      this.classList.add('active');
+      this.querySelector('.slaider-two-nav-arrows-icon-svg').classList.add('active');
+    }
+  }
+}
+
+
+
+$('.slider-four').slick({
+  variableWidth: true,
+  centerMode: true,
+  infinite: true,
+  slidesToShow: 3,
+  centerPadding: '8vw',
+  initialSlide: 2,
+  dots: true,
+
+  responsive: [
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: false,
+      }
+    }
+  ]
+});
 
 
 
@@ -199,7 +209,9 @@ subscribeForm.addEventListener('submit', subscribeMail);
 function subscribeMail(e) {
   e.preventDefault();
   let email = document.getElementById("email").value;
-  localStorage.setItem('subscribed-email', email);
+  if (email != '') {
+    localStorage.setItem('subscribed-email', email);
+  }
 }
 
 

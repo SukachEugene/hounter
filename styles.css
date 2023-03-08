@@ -96,7 +96,7 @@ End of Eric Meyer's CSS Reset from https://meyerweb.com/eric/tools/css/reset/
 */
 
 html {
-    overflow-x: initial !important;
+    /* overflow-x: initial !important; */
 }
 
 html,
@@ -395,9 +395,6 @@ h1 span {
     margin-top: 212px;
 }
 
-.block-three-left-element {
-    width: 45%;
-}
 
 .block-two-head-element,
 .block-three-head-element {
@@ -864,21 +861,28 @@ h2 {
     margin-right: 0.5vw;
 }
 
+.block-three-left-element {
+    width: 45%;
+}
+
 .block-three-media-container {
     /* position: absolute;
     margin-top: -380px;
     margin-left: 60vw; */
 
+    position: relative;
     margin-top: -28px;
-    width: 35vw;
+    width: 45%;
 }
 
 .block-three-media-container-video {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url('images/video-cover.png');
-    background-size: 100% 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     min-height: 500px;
     width: auto;
 }
@@ -895,7 +899,8 @@ h2 {
     align-items: flex-end;
     flex-wrap: nowrap;
     margin-left: -3vw;
-    margin-top: -140px;
+    margin-top: -150px;
+    width: 95%;
 }
 
 .block-three-picture1 {
@@ -1108,7 +1113,7 @@ h2 {
     display: grid;
     row-gap: 44px;
     /* column-gap: 4.7vw; */
-    column-gap: 8vw;
+    column-gap: 5vw;
     grid-template-areas:
         "first main"
         "second main"
@@ -1117,10 +1122,12 @@ h2 {
 
 .block-five-element {
     display: flex;
+    max-width: 40vw;
 }
 
 .block-five-element-logo {
-    width: 20vw;
+    width: 50%;
+    height: max-content;
 }
 
 .block-five-element-text {
@@ -1166,11 +1173,12 @@ h2 {
     max-height: 60%;
     display: flex;
     flex-direction: column;
-
 }
 
 .block-five-element-main-article-image {
     margin-bottom: 24px;
+    width: 100%;
+    height: max-content;
 }
 
 .block-five-main-element-text {
@@ -1200,6 +1208,7 @@ h2 {
     letter-spacing: 0px;
     color: #1B1C57;
     margin-bottom: 12px;
+    text-align: left;
 }
 
 .block-five-element a {
@@ -1316,6 +1325,8 @@ h2 {
     margin: 4px;
     padding: 12px 1.11vw;
     border: none;
+    max-height: 100%;
+    width: auto;
 
     font-size: 14px;
     font-weight: 600;
@@ -1346,7 +1357,11 @@ h2 {
     line-height: 32px;
     letter-spacing: 0px;
     color: #1B1C57;
+}
 
+#subscribed-email {
+    display: block;
+    text-align: center;
 }
 
 .block-six-icons-container {
@@ -1415,7 +1430,7 @@ h2 {
     position: absolute;
     max-height: 55px;
     width: auto;
-    margin-left: 74.4vw;
+    right: 4%;
     margin-top: 197px;
 }
 
@@ -1588,11 +1603,46 @@ header .header-links {
 
 @media screen and (max-width: 1200px) {
 
+    .slaider-four-element-caption {
+        margin-top: -100px;
+    }
+
 /* 
     .color-spot-four1, .color-spot-four2 {
         transform: scale(1.2);
     } */
 
+    .block-five-artikels-container {
+        grid-template-areas:
+        "main main main"
+        "first second third";
+    }
+
+    .block-five-element.main-article {
+       max-width: 100%; 
+    }
+
+    .block-five-element-main-article-image {
+        /* max-width: fit-content; */
+    }
+
+    .block-five-element {
+        flex-direction: column;
+    }
+
+    .block-five-element-logo {
+        width: 100%;
+    }
+
+    .block-five-element-text {
+        margin-left: 0;
+        padding-top: 18px;
+    }
+
+
+    .block-six-form-container  {
+        width: 38vw;
+    }
 
     .footer-container-two {
         width: 60%;
@@ -1611,15 +1661,29 @@ header .header-links {
         padding-right: 5vw;
         max-width: 90vw;
     }
-/* 
-    footer {
-        margin-bottom: 0;
-    } */
+
+    h2 {
+        font-size: 28px;
+    }
     
-    /* .color-spot-four1, .color-spot-four2 {
-        margin-top: -150px;
-        transform: scale(1.2);
-    } */
+    .block-six {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        max-width: 90vw;
+    }
+
+    .block-six h2 {
+        font-size: 26px;
+        padding-bottom: 28px;
+    }
+
+    .block-six-form-container {
+        width: 50vw;
+    }
+
+    .block-six-icon-two {
+        margin-left: 18vw;
+    }
 
     .footer-container-two {
         width: 60%;
@@ -1636,6 +1700,90 @@ header .header-links {
 }
 
 @media screen and (max-width: 600px) {
+
+
+    .slaider-four-element-caption {
+        margin-top: -80px;
+    }
+
+    .slaider-four-element-caption2 {
+        padding: 24px 18px;
+    }
+
+    .slaider-four-element-caption h4 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .slaider-four-element-caption-comment {
+        text-align: justify;
+    }
+
+    .slaider-four-element-caption-bottom {
+        flex-direction: column;
+    }
+
+    .slaider-four-element-caption-bottom-author {
+        margin-bottom: 14px;
+    }
+
+    .slaider-four-element-caption-bottom-author img {
+        margin-right: 8px;
+    }
+
+    .block-five-artikels-container {
+        grid-template-areas:
+        "main"
+        "first" 
+        "second" 
+        "third";
+    }
+
+    .block-five-element.main-article {
+        flex-direction: column;
+    }
+
+    .block-five-element {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    .block-five-element-logo{
+        width: 50%;
+    }
+    
+    .block-five-element-text {
+        padding-top: 0;
+        margin-left: 4vw;
+        width: 50%;
+    }
+
+    .block-five-element-text h6 {
+        max-width: none;
+    }
+
+
+    .block-six-icon-one, .block-six-icon-two, .block-six-icon-three, .block-six-icon-four, 
+    .block-six-icon-five, .block-six-icon-six, .block-six-icon-seven, .block-six-icon-eight {
+        display: none;
+    }
+
+    .block-six h2 {
+        max-width: 80%;
+    }
+
+    .block-six-form-container {
+        width: 70vw;
+    }
+
+    .block-six-form-mail-image {
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+
+    .block-six-form-button {
+        font-size: 10px;
+    }
 
     footer {
         flex-direction: column-reverse;
@@ -1666,6 +1814,44 @@ header .header-links {
 }
 
 @media screen and (max-width: 400px) {
+
+
+    /* .block-five-element {
+        flex-direction: column;
+        width: 100%;
+    } */
+
+    .block-five-artikels-container {
+        
+    }
+
+    .block-five-element {
+        flex-direction: column;
+    }
+
+    .block-five-element-logo {
+        /* display: none; */
+        width: 100%;
+        height: max-content;
+        margin-bottom: 24px;
+        /* margin: 0 20%; */
+    }
+
+    .block-five-element-text {
+        width: 100%;
+        margin-left: 0;
+        /* border-top: 1px solid grey;
+        padding-top: 20px; */
+    }
+    
+
+    .block-six-form-container {
+        width: 80vw;
+    }
+
+    .block-six-form-button {
+        font-size: 12px;
+    }
 
     .footer-container-two h6 {
         font-size: 16px;
