@@ -16,10 +16,31 @@ $('.slider-one').slick({
 $('.slider-two').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
+  arrows: false,
+  dots: false,
   swipeToSlide: true,
   Infinity: true,
   variableWidth: true,
   initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 3,
+        variableWidth: false,
+      },
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        variableWidth: false,
+      },
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: false,
+      }
+    }
+  ]
 });
 
 var filter_house = true;
