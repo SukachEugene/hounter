@@ -1,3 +1,22 @@
+
+// ----------- Margin for banner image -----------
+
+window.addEventListener('DOMContentLoaded', getMarginForBanner);
+window.addEventListener('resize', getMarginForBanner);
+
+function getMarginForBanner() {
+  
+  let headerHeight = document.getElementById("header").offsetHeight;
+  let correctMargin = headerHeight + 80;
+
+  if (window.innerWidth >= 1300) {
+    document.getElementsByClassName("block-one-right-part-banner-container")[0].style.marginTop = "-"+correctMargin+"px";
+  } else {
+    document.getElementsByClassName("block-one-right-part-banner-container")[0].style.marginTop = "50px";
+  }
+}
+
+
 // ----------- Sliders -----------
 
 $('.slider-one').slick({
@@ -5,9 +24,9 @@ $('.slider-one').slick({
   slidesToShow: 3,
   arrows: false,
   dots: false,
-  infinite: true,
   variableWidth: true,
-
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
 
 
@@ -122,7 +141,6 @@ let buttons = document.getElementsByClassName("slaider-two-filters-icon-svg");
 let arrows = document.getElementsByClassName("slaider-two-nav-arrows-icon-svg");
 
 
-
 function getStyleToSliderButtons() {
   if (this.classList.contains("slider-two-button")) {
 
@@ -148,7 +166,6 @@ function getStyleToSliderArrows() {
   if (this.classList.contains("slider-two-button-nav")) {
 
     if (!this.classList.contains("active")) {
-      console.log("AAAA")
 
       for (i = 0; i < slider_buttons_nav.length; i++) {
         slider_buttons_nav[i].classList.remove('active');
@@ -189,8 +206,8 @@ $('.slider-four').slick({
 
 
 
-// ----------- Video -----------
 
+// ----------- Video -----------
 
 window.document.onkeydown = function (e) {
 
@@ -236,11 +253,9 @@ function subscribeMail(e) {
 }
 
 
-
 function checkIfEmailStorageIsEmpty() {
   return localStorage.getItem('subscribed-email') == null;
 }
-
 
 
 let emailForm = document.getElementById('subscribe-form');
@@ -260,7 +275,6 @@ emailForm.addEventListener('submit', (event) => {
     emailAdress.style.display = 'block';
   }
 });
-
 
 
 window.addEventListener('DOMContentLoaded', checkSubscribed);
@@ -286,6 +300,10 @@ function checkSubscribed() {
 
 
 
+
+
+// ----------- Burger menu -----------
+
 function menuSwitch() {
   let links = document.getElementById('main-nav-links');
   let openButton = document.getElementById('open-main-nav');
@@ -301,3 +319,4 @@ function menuSwitch() {
     closeButton.className = 'show';
   }
 }
+
