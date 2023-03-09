@@ -49,26 +49,56 @@
             <img class="comlany-logo-blue-element" title="" src="images/Rectangle 9.png" alt="">
             <h6>Hounter</h6>
         </div>
+
+
+        <div class="burger-menu">
+            <button onclick='menuSwitch()' class="pointer" id="open-main-nav">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-menu hide" id="main-nav-links">
+                <div class="nav-menu-mobile-style">
+
+                    <button onclick='menuSwitch()' id="close-main-nav" class="hide">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <a href="#anchor-about-us" onclick='menuSwitch()'>About Us</a>
+                    <a href="#anchor-article" onclick='menuSwitch()'>Article</a>
+                    <a href="#anchor-property" onclick='menuSwitch()'>Property</a>
+                    <button class="pointer" type="button">Sign Up!</button>
+
+                </div>
+            </div>
+        </div>
+
+
         <div class="header-links">
-            <a href="#">About Us</a>
-            <a href="#">Article</a>
-            <a href="#">Property
-                <img title="" src="images/down_arrow.png" alt="">
+            <a href="#anchor-about-us">About Us</a>
+            <a href="#anchor-article">Article</a>
+            <a href="#anchor-property">Property
+                <!-- <img title="" src="images/down_arrow.png" alt=""> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 11 6" fill="none">
+                    <path
+                        d="M10.6236 1.12001C10.624 0.946246 10.5631 0.777845 10.4515 0.644043C10.3887 0.568737 10.3116 0.506487 10.2245 0.460859C10.1374 0.415232 10.0421 0.387122 9.94413 0.378141C9.84612 0.369161 9.74728 0.379485 9.65329 0.408522C9.5593 0.43756 9.47199 0.48474 9.39637 0.547361L5.38526 3.87916L1.36668 0.666354C1.29013 0.604578 1.20205 0.558444 1.10751 0.530606C1.01296 0.502768 0.913813 0.493774 0.81576 0.50414C0.717706 0.514507 0.62268 0.54403 0.536144 0.591013C0.449609 0.637995 0.373269 0.701511 0.311514 0.77791C0.243388 0.854858 0.192001 0.94497 0.160579 1.04259C0.129157 1.14021 0.118378 1.24323 0.128919 1.34519C0.139459 1.44715 0.171091 1.54584 0.22183 1.63507C0.272569 1.7243 0.341319 1.80215 0.423766 1.86372L4.91381 5.45582C5.04771 5.5652 5.21567 5.625 5.38901 5.625C5.56234 5.625 5.7303 5.5652 5.8642 5.45582L10.3542 1.73729C10.4448 1.66268 10.5164 1.56791 10.5632 1.46066C10.61 1.35341 10.6307 1.23671 10.6236 1.12001Z"
+                        fill="white" />
+                </svg>
             </a>
             <button class="pointer" type="button">Sign Up!</button>
         </div>
+
 
     </header>
     <section class="block-one">
         <article class="block-one-left-part">
 
-            <h1>find the place to <br>live <span>your dreams</span> <br>easily here</h1>
+            <h1>find the place to live <span>your dreams</span> easily here</h1>
             <p>Everything you need about finding your place to live will be here, where it will be easier for you</p>
 
             <form class="block-one-left-part-search" action="/action.php" autocomplete="on">
                 <img class="point-image" title="" src="images/Vector_point.png" alt="">
                 <input type="search" placeholder="Search for the location you want!">
-                <button class="block-one-left-part-search-button pointer" type="submit">Search
+                <button class="block-one-left-part-search-button pointer" type="submit"><span>Search</span>
                     <img src="images/Vector_right_arrow.png" title="" alt="">
                 </button>
             </form>
@@ -94,10 +124,14 @@
         </article>
 
         <article class="block-one-right-part">
-            <img class="house-banner" title="" src="images/house_banner.png" alt="">
-            <img class="red-corner" title="" src="images/red_corner.png" alt="">
+
+            <div class="block-one-right-part-banner-container">
+                <img class="house-banner" title="" src="images/house_banner.png" alt="">
+                <!-- <img class="red-corner" title="" src="images/red_corner.png" alt="">
             <img class="orange-corner" title="" src="images/orange_corner.png" alt="">
-            <img class="blue-corner" title="" src="images/blue_corner.png" alt="">
+            <img class="blue-corner" title="" src="images/blue_corner.png" alt=""> -->
+                <img class="lines" title="" src="images/lines.svg" alt="">
+            </div>
 
             <div class="slider-one">
                 <div class="slider-one-element first-element">
@@ -140,7 +174,7 @@
         </article>
     </section>
 
-    <section class="block-two">
+    <section class="block-two" id="anchor-property">
         <div class="block-two-head-element container">
             <img src="images/Rectangle 14.png" title="" alt="">
             <p>Our Recommendation</p>
@@ -402,110 +436,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-            <!-- <div class="slaider-two-element house">
-                <img class="slaider-two-element-image" src="images/Rectangle 15.png" title="" alt="">
-                <div class="slaider-two-element-image-tag popular">
-                    <img src="images/tag1.png" title="" alt="">
-                    <p>Popular</p>
-                </div>
-                <p class="slaider-two-element-name">Roselands House</p>
-                <p class="slaider-two-element-price">$ 35.000.000</p>
-                <div class="slaider-two-element-teammate">
-                    <img src="images/Ellipse 6_1.png" title="" alt="">
-                    <div class="slaider-two-element-teammate-caption">
-                        <p class="slaider-two-element-teammate-name">Dianne Russell</p>
-                        <p class="slaider-two-element-teammate-location">Manchester, Kentucky</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slaider-two-element villa">
-                <img class="slaider-two-element-image" src="images/Rectangle 16.png" title="" alt="">
-                <div class="slaider-two-element-image-tag new-house">
-                    <img src="images/tag2.png" title="" alt="">
-                    <p>New house</p>
-                </div>
-                <p class="slaider-two-element-name">Woodlandside</p>
-                <p class="slaider-two-element-price">$ 20.000.000</p>
-                <div class="slaider-two-element-teammate">
-                    <img src="images/Ellipse 6_2.png" title="" alt="">
-                    <div class="slaider-two-element-teammate-caption">
-                        <p class="slaider-two-element-teammate-name">Robert Fox</p>
-                        <p class="slaider-two-element-teammate-location">Dr. San Jose, South Dakota</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slaider-two-element apartment">
-                <img class="slaider-two-element-image" src="images/Rectangle 17.png" title="" alt="">
-                <div class="slaider-two-element-image-tag best-deals">
-                    <img src="images/tag3.png" title="" alt="">
-                    <p>Best Deals</p>
-                </div>
-                <p class="slaider-two-element-name">The Old Lighthouse</p>
-                <p class="slaider-two-element-price">$ 44.000.000</p>
-                <div class="slaider-two-element-teammate">
-                    <img src="images/Ellipse 6_3.png" title="" alt="">
-                    <div class="slaider-two-element-teammate-caption">
-                        <p class="slaider-two-element-teammate-name">Ronald Richards</p>
-                        <p class="slaider-two-element-teammate-location">Santa Ana, Illinois</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slaider-two-element villa">
-                <img class="slaider-two-element-image" src="images/Rectangle 16.png" title="" alt="">
-                <div class="slaider-two-element-image-tag popular">
-                    <img src="images/tag1.png" title="" alt="">
-                    <p>Popular</p>
-                </div>
-                <p class="slaider-two-element-name">Cosmo's House</p>
-                <p class="slaider-two-element-price">$ 22.000.000</p>
-                <div class="slaider-two-element-teammate">
-                    <img src="images/Ellipse 6_4.png" title="" alt="">
-                    <div class="slaider-two-element-teammate-caption">
-                        <p class="slaider-two-element-teammate-name">Jenny Wilson</p>
-                        <p class="slaider-two-element-teammate-location">Preston Rd. Inglewood, Maine 98380</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slaider-two-element house">
-                <img class="slaider-two-element-image" src="images/Rectangle 16.png" title="" alt="">
-                <div class="slaider-two-element-image-tag popular">
-                    <img src="images/tag1.png" title="" alt="">
-                    <p>Popular</p>
-                </div>
-                <p class="slaider-two-element-name">More Example House</p>
-                <p class="slaider-two-element-price">$ 11.000.000</p>
-                <div class="slaider-two-element-teammate">
-                    <img src="images/Ellipse 6_4.png" title="" alt="">
-                    <div class="slaider-two-element-teammate-caption">
-                        <p class="slaider-two-element-teammate-name">Jenny Wilson</p>
-                        <p class="slaider-two-element-teammate-location">Preston Rd. Inglewood, Maine 98380</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slaider-two-element house">
-                <img class="slaider-two-element-image" src="images/Rectangle 15.png" title="" alt="">
-                <div class="slaider-two-element-image-tag popular">
-                    <img src="images/tag1.png" title="" alt="">
-                    <p>Popular</p>
-                </div>
-                <p class="slaider-two-element-name">More Example House</p>
-                <p class="slaider-two-element-price">$ 11.000.000</p>
-                <div class="slaider-two-element-teammate">
-                    <img src="images/Ellipse 6_4.png" title="" alt="">
-                    <div class="slaider-two-element-teammate-caption">
-                        <p class="slaider-two-element-teammate-name">Jenny Wilson</p>
-                        <p class="slaider-two-element-teammate-location">Preston Rd. Inglewood, Maine 98380</p>
-                    </div>
-                </div>
-            </div> -->
-
         </div>
     </section>
 
@@ -516,6 +446,93 @@
 
 
     <section class="block-three container">
+
+        <div id="popup-container">
+            <a class="popup-close" id="popup-close" onclick="popup_close();"></a>
+            <video id="housetour-video" width="100%" controls muted loop>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="fade" onclick="popup_close()"></div>
+
+
+
+        <div class="block-three-header">
+            <div class="block-three-head-element">
+                <img src="images/Rectangle 14.png" title="" alt="">
+                <p>Ready to Sell!</p>
+            </div>
+            <h2>Let’s tour and see our house!</h2>
+        </div>
+
+
+
+        <div class="block-three-description">
+
+            <p class="block-three-text-style1">Houses recommended by our partners that have been curated to become
+                the
+                home of your dreams!</p>
+            <p class="block-three-text-style2">House Detail</p>
+            <div class="block-three-text-style3 icons-elements">
+                <div class="block-three-icons-element">
+                    <img src="images/icon1.svg" title="" alt="">
+                    <span>4 Bedrooms</span>
+                </div>
+                <div class="block-three-icons-element">
+                    <img class="correcting-margin" src="images/icon2.svg" title="" alt="">
+                    <span class="correcting-margin2">2 Bathrooms</span>
+                </div>
+                <div class="block-three-icons-element">
+                    <img src="images/icon3.svg" title="" alt="">
+                    <span>1 Carport</span>
+                </div>
+                <div class="block-three-icons-element">
+                    <img src="images/icon4.svg" title="" alt="">
+                    <span>2 Floors</span>
+                </div>
+            </div>
+            <div class="block-three-contact-container">
+                <div class="block-three-contact-container-person">
+                    <img src="images/Dianne.png" title="" alt="">
+                    <div>
+                        <p class="block-three-contact-container-name">Dianne Russell</p>
+                        <p class="block-three-contact-container-position">Manager Director</p>
+                    </div>
+                </div>
+                <a href="tel:+777-777-777" class="block-three-call-button">
+                    <img src="images/phone_icon.png" title="" alt="">
+                    Contact Now
+                </a>
+            </div>
+        </div>
+
+        <div class="block-three-media-container">
+
+            <div class="play-button-container">
+                <img class="play-button pointer" src="images/play_button.svg" onclick="popup_open()" title="" alt="">
+            </div>
+
+            <div class="block-three-interior-pictures-container">
+                <img class="block-three-picture1" src="images/interior1.png" title="" alt="">
+                <img class="block-three-picture2" src="images/interior2.png" title="" alt="">
+                <img class="block-three-picture2" src="images/interior3.png" title="" alt="">
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- <section class="block-three container">
+
+        <div id="popup-container">
+            <a class="popup-close" id="popup-close" onclick="popup_close();"></a>
+            <video id="housetour-video" width="100%" controls muted loop>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="fade" onclick="popup_close()"></div>
+
+
 
         <div class="block-three-left-element">
 
@@ -566,8 +583,7 @@
         </div>
         <div class="block-three-media-container">
             <div class="block-three-media-container-video">
-                <!-- <img src="images/video-cover.png" title="" alt=""> -->
-                <img class="play-button pointer" src="images/play_button.svg" onclick="lightbox_open()" title="" alt="">
+                <img class="play-button pointer" src="images/play_button.svg" onclick="popup_open()" title="" alt="">
             </div>
             <div class="block-three-interior-pictures-container">
                 <img class="block-three-picture1" src="images/interior1.png" title="" alt="">
@@ -575,9 +591,9 @@
                 <img class="block-three-picture3" src="images/interior3.png" title="" alt="">
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="block-four">
+    <section class="block-four" id="anchor-about-us">
         <div class="block-four-head-element">
             <img src="images/Rectangle 14.png" title="" alt="">
             <p>See Our Review</p>
@@ -731,7 +747,7 @@
 
 
 
-        <div class="block-five-head-element">
+        <div class="block-five-head-element container" id="anchor-article">
             <img src="images/Rectangle 14.png" title="" alt="">
             <p>See tips and trick from our partnership</p>
 
@@ -819,13 +835,20 @@
     </section>
 
     <section class="block-six">
-        <h2>Subscribe For More Info and update from Hounter</h2>
 
-        <form class="block-six-form-container" action="/action.php" autocomplete="on">
-            <img class="block-six-form-mail-image" title="" src="images/mail_icon.png" alt="">
-            <input type="email" placeholder="Your email here">
-            <button class="block-six-form-button pointer" type="submit">Subsribe Now</button>
-        </form>
+        <div class="block-six-content-container">
+
+            <h2 id="block-six-heder">Subscribe For More Info and update from Hounter</h2>
+            <div id="subscribed-email-container">Subscribed email is: <br><span id="subscribed-email"></span></div>
+
+            <form class="block-six-form-container" id="subscribe-form" autocomplete="off">
+                <img class="block-six-form-mail-image" title="" src="images/mail_icon.png" alt="">
+                <input type="email" name="email" id="email" placeholder="Your email here">
+                <button class="block-six-form-button pointer" id="subscribe-button"
+                    type="submit">Subsribe&nbsp;Now</button>
+            </form>
+
+        </div>
 
         <div class="block-six-icons-container">
             <img class="block-six-icon-one" src="images/block6_1.png" title="" alt="">
@@ -839,12 +862,6 @@
         </div>
 
     </section>
-
-    <div class="color-spots-container">
-        <img class="color-spot-four1" src="images/Color Blur4-1.svg" title="" alt="">
-        <img class="color-spot-four2" src="images/Color Blur4-2.svg" title="" alt="">
-    </div>
-
 
     <footer class="container">
         <div class="footer-container-one">
@@ -870,7 +887,7 @@
                 <a href="#">Villa</a>
             </div>
 
-            <div class="footer-container-two-element last-element">
+            <div class="footer-container-two-element">
                 <h6>Article</h6>
                 <a href="#">New Article</a>
                 <a href="#">Popular Article</a>
@@ -878,7 +895,7 @@
                 <a href="#">Tips & Tricks</a>
             </div>
 
-            <div class="footer-container-two-element">
+            <div class="footer-container-two-element last-element">
                 <h6>Contact</h6>
                 <a href="https://goo.gl/maps/rrWmLg3iZ4TuXVQn9" target="_blank">2464 Royal Ln. Mesa, New Jersey
                     45463</a>
@@ -890,16 +907,10 @@
     </footer>
 
 
-
-    <div id="light">
-        <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
-        <video id="VisaChipCardVideo" width="600" controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        </video>
+    <div class="color-spots-container">
+        <img class="color-spot-four1" src="images/Color Blur4-1.svg" title="" alt="">
+        <img class="color-spot-four2" src="images/Color Blur4-2.svg" title="" alt="">
     </div>
-
-    <div id="fade" onClick="lightbox_close();"></div>
-
 
 
 
