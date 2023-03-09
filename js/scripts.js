@@ -5,9 +5,9 @@ window.addEventListener('DOMContentLoaded', getMarginForBanner);
 window.addEventListener('resize', getMarginForBanner);
 
 function getMarginForBanner() {
+  
   let headerHeight = document.getElementById("header").offsetHeight;
   let correctMargin = headerHeight + 80;
-
 
   if (window.innerWidth >= 1300) {
     document.getElementsByClassName("block-one-right-part-banner-container")[0].style.marginTop = "-"+correctMargin+"px";
@@ -25,10 +25,8 @@ $('.slider-one').slick({
   arrows: false,
   dots: false,
   variableWidth: true,
-
-  // centerMode: true,
-  // infinite: false,
-
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
 
 
@@ -143,7 +141,6 @@ let buttons = document.getElementsByClassName("slaider-two-filters-icon-svg");
 let arrows = document.getElementsByClassName("slaider-two-nav-arrows-icon-svg");
 
 
-
 function getStyleToSliderButtons() {
   if (this.classList.contains("slider-two-button")) {
 
@@ -209,8 +206,8 @@ $('.slider-four').slick({
 
 
 
-// ----------- Video -----------
 
+// ----------- Video -----------
 
 window.document.onkeydown = function (e) {
 
@@ -256,11 +253,9 @@ function subscribeMail(e) {
 }
 
 
-
 function checkIfEmailStorageIsEmpty() {
   return localStorage.getItem('subscribed-email') == null;
 }
-
 
 
 let emailForm = document.getElementById('subscribe-form');
@@ -280,7 +275,6 @@ emailForm.addEventListener('submit', (event) => {
     emailAdress.style.display = 'block';
   }
 });
-
 
 
 window.addEventListener('DOMContentLoaded', checkSubscribed);
@@ -306,6 +300,8 @@ function checkSubscribed() {
 
 
 
+
+
 // ----------- Burger menu -----------
 
 function menuSwitch() {
@@ -324,17 +320,3 @@ function menuSwitch() {
   }
 }
 
-
-
-
-
-// let color_spot_element = document.getElementById('color-spot-element');
-
-// function clearSelection() {
-//   if(dcolor_sp .selection && document.selection.empty) {
-//       document.selection.empty();
-//   } else if(window.getSelection) {
-//       var sel = window.getSelection();
-//       sel.removeAllRanges();
-//   }
-// }
