@@ -170,10 +170,6 @@ header {
     transition: 0.8s;
 }
 
-.header-links svg path {
- fill: gray;
-}
-
 .header-links svg {
     margin-left: 5px;
     padding-top: 5px;
@@ -181,6 +177,10 @@ header {
 
 .header-links a:hover {
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+.burger-menu {
+    display: none;
 }
 
 .header-links img {
@@ -1886,6 +1886,10 @@ header .header-links {
         color: grey;
     }
 
+    .header-links svg path {
+        fill: gray;
+       }
+
     .header-links a:hover {
         background-color: rgba(128, 128, 128, 0.2);
         border-color: rgba(128, 128, 128, 0.2);
@@ -1924,6 +1928,16 @@ header .header-links {
 
     .block-one-right-part-banner-container {
         margin-top: 50px;
+    }
+
+
+    .partnership-logos {
+        width: 100%;
+        justify-content: start;
+    }
+
+    .partnership-logos a {
+        margin-right: 4%;
     }
 
 }
@@ -2092,6 +2106,91 @@ header .header-links {
         font-size: 28px;
     }
 
+    header {
+        margin-left: 3.33vw;
+    }
+
+    header .header-links {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        align-self: center;
+    }
+    
+    #open-main-nav {
+        border: none;
+        font-size: 24px;
+        background-color: rgba(128, 128, 128, 0);
+        color: #1B1C57;
+    }
+
+    #open-main-nav:hover {
+        color: grey;
+    }
+
+   #main-nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 200;
+        background-color: white;
+        
+    }
+
+    .nav-menu-mobile-style {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 4px solid grey;
+        padding-bottom: 20px;
+       
+    }
+
+    #close-main-nav {
+        align-self: flex-end;
+        border: none;
+        background-color: rgba(128, 128, 128, 0);
+        font-size: 32px;
+        margin: 0 4vw 0 0;
+        color: grey;
+    }
+
+    .nav-menu-mobile-style a {
+        text-decoration: none;
+        font-size: 24px;
+        padding: 10px 0 10px 30px;
+        color: #1B1C57;
+    }
+
+    .nav-menu-mobile-style button {
+        font-size: 24px;
+        padding: 10px 0 10px 30px;
+        background-color: white;
+        color: #1B1C57;
+        border: none;
+        text-align: left;
+
+        font-family: Lexend;
+        font-weight: 800;
+        line-height: 22px;
+        letter-spacing: 0px;
+        
+
+
+    }
+
+
+    .hide {
+        display: none;
+    }
+    
+    .show {
+        display: block;
+    }
+
+
     .slaider-two-element-image {
         width: 55vw;
     }
@@ -2167,6 +2266,27 @@ header .header-links {
     .slider-two-button {
         margin-top: 10px;
     } */
+
+    .block-one-left-part-search {
+        width: 92%;
+    }
+
+    .block-one-left-part-search input {
+        min-width: 220px;
+    }
+
+    .block-one-left-part-search-button span {
+        display: none;
+    }
+
+    .partnership-logos {
+        flex-wrap: wrap;
+    }
+
+    .partnership-logos a {
+        min-width: 40px;
+    }
+
 
     .slaider-two-element-image {
         width: 84vw;
@@ -2329,6 +2449,19 @@ header .header-links {
 
 }
 
+
+@media screen and (max-width: 500px) {
+
+    .lines {
+        display: none;
+    }
+
+    .house-banner {
+        min-height: 350px;
+    }
+}
+
+
 @media screen and (max-width: 400px) {
 
 
@@ -2337,6 +2470,28 @@ header .header-links {
         width: 100%;
     } */
 
+    .block-one-left-part-search {
+        width: 95%;
+    }
+
+    .point-image {
+        display: none;
+    }
+
+    .block-one-left-part-search input {
+        min-width: 190px;
+        margin-left: 8px;
+
+    }
+
+    .block-one-left-part-search input::placeholder {
+        font-size: 12px;
+    }
+
+    .house-banner {
+        min-height: 300px;
+    }
+
     .slaider-two-filters svg {
         display: none;
     }
@@ -2344,6 +2499,14 @@ header .header-links {
     .icons-elements {
         grid-template-columns: 1fr;
         row-gap: 10px;
+    }
+
+    .slider-one-element-caption-header {
+        font-size: 14px;
+    }
+
+    .slider-one-element-caption-text {
+        font-size: 10px;
     }
 
     .block-three-contact-container {

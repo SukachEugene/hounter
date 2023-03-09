@@ -49,10 +49,34 @@
             <img class="comlany-logo-blue-element" title="" src="images/Rectangle 9.png" alt="">
             <h6>Hounter</h6>
         </div>
+
+
+        <div class="burger-menu">
+            <button onclick='menuSwitch()' class="pointer" id="open-main-nav">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-menu hide" id="main-nav-links">
+                <div class="nav-menu-mobile-style">
+
+                    <button onclick='menuSwitch()' id="close-main-nav" class="hide">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <a href="#anchor-about-us" onclick='menuSwitch()'>About Us</a>
+                    <a href="#anchor-article" onclick='menuSwitch()'>Article</a>
+                    <a href="#anchor-property" onclick='menuSwitch()'>Property</a>
+                    <button class="pointer" type="button">Sign Up!</button>
+
+                </div>
+            </div>
+        </div>
+
+
         <div class="header-links">
-            <a href="#">About Us</a>
-            <a href="#">Article</a>
-            <a href="#">Property
+            <a href="#anchor-about-us">About Us</a>
+            <a href="#anchor-article">Article</a>
+            <a href="#anchor-property">Property
                 <!-- <img title="" src="images/down_arrow.png" alt=""> -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 11 6" fill="none">
                     <path
@@ -62,6 +86,7 @@
             </a>
             <button class="pointer" type="button">Sign Up!</button>
         </div>
+
 
     </header>
     <section class="block-one">
@@ -73,7 +98,7 @@
             <form class="block-one-left-part-search" action="/action.php" autocomplete="on">
                 <img class="point-image" title="" src="images/Vector_point.png" alt="">
                 <input type="search" placeholder="Search for the location you want!">
-                <button class="block-one-left-part-search-button pointer" type="submit">Search
+                <button class="block-one-left-part-search-button pointer" type="submit"><span>Search</span>
                     <img src="images/Vector_right_arrow.png" title="" alt="">
                 </button>
             </form>
@@ -149,7 +174,7 @@
         </article>
     </section>
 
-    <section class="block-two">
+    <section class="block-two" id="anchor-property">
         <div class="block-two-head-element container">
             <img src="images/Rectangle 14.png" title="" alt="">
             <p>Our Recommendation</p>
@@ -568,7 +593,7 @@
         </div>
     </section> -->
 
-    <section class="block-four">
+    <section class="block-four" id="anchor-about-us">
         <div class="block-four-head-element">
             <img src="images/Rectangle 14.png" title="" alt="">
             <p>See Our Review</p>
@@ -722,7 +747,7 @@
 
 
 
-        <div class="block-five-head-element container">
+        <div class="block-five-head-element container" id="anchor-article">
             <img src="images/Rectangle 14.png" title="" alt="">
             <p>See tips and trick from our partnership</p>
 
