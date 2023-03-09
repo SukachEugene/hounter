@@ -1,3 +1,14 @@
+
+
+
+// let headerHeight = document.getElementById("header").offsetHeight;
+// let bannerMargin = document.getElementsByClassName("block-one-right-part-banner-container")[0].style.marginTop = "-"+headerHeight+"px";
+
+// console.log(headerHeight);
+
+
+
+
 // ----------- Sliders -----------
 
 $('.slider-one').slick({
@@ -5,8 +16,10 @@ $('.slider-one').slick({
   slidesToShow: 3,
   arrows: false,
   dots: false,
-  infinite: true,
   variableWidth: true,
+
+  // centerMode: true,
+  // infinite: false,
 
 });
 
@@ -148,7 +161,6 @@ function getStyleToSliderArrows() {
   if (this.classList.contains("slider-two-button-nav")) {
 
     if (!this.classList.contains("active")) {
-      console.log("AAAA")
 
       for (i = 0; i < slider_buttons_nav.length; i++) {
         slider_buttons_nav[i].classList.remove('active');
@@ -286,6 +298,8 @@ function checkSubscribed() {
 
 
 
+// ----------- Burger menu -----------
+
 function menuSwitch() {
   let links = document.getElementById('main-nav-links');
   let openButton = document.getElementById('open-main-nav');
@@ -301,3 +315,18 @@ function menuSwitch() {
     closeButton.className = 'show';
   }
 }
+
+
+
+
+
+// let color_spot_element = document.getElementById('color-spot-element');
+
+// function clearSelection() {
+//   if(dcolor_sp .selection && document.selection.empty) {
+//       document.selection.empty();
+//   } else if(window.getSelection) {
+//       var sel = window.getSelection();
+//       sel.removeAllRanges();
+//   }
+// }

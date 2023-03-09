@@ -97,6 +97,7 @@ End of Eric Meyer's CSS Reset from https://meyerweb.com/eric/tools/css/reset/
 
 html {
     /* overflow-x: initial !important; */
+    scroll-behavior: smooth;
 }
 
 html,
@@ -118,11 +119,15 @@ header {
     margin: 3.125vw 0;
     display: flex;
     justify-content: space-between;
+    align-items: start;
 }
+
+
 
 .company-logo {
     display: flex;
     position: relative;
+    min-width: 50%;
 }
 
 .company-logo img {
@@ -144,14 +149,38 @@ header {
     letter-spacing: 0px;
 }
 
+
 .header-links {
     font-size: 14px;
     font-weight: 600;
     line-height: 18px;
     letter-spacing: 0px;
     display: flex;
+    min-width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 20px;
+    align-items: start;
     flex-wrap: nowrap;
 }
+
+.test {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    width: 70%;
+}
+
+/* header .company-logo {
+    width: 50%;
+} */
+
+/* header .header-links {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+} */
+
 
 .header-links a {
     display: flex;
@@ -319,6 +348,7 @@ h1 span {
     padding: 12px 16px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: nowrap;
 
     font-size: 14px;
@@ -326,6 +356,8 @@ h1 span {
     line-height: 22px;
     letter-spacing: 0px;
     color: white;
+
+    min-width: 50px;
 
     transition: 1s;
 
@@ -347,13 +379,14 @@ h1 span {
 
 .partnership-logos {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 68.8%;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    width: 70%;
 }
 
 .partnership-logos a {
     text-decoration: none;
+    margin-right: 1vw;
 }
 
 .partnership-logos a img {
@@ -362,7 +395,7 @@ h1 span {
 
 .block-one-right-part-banner-container {
     position: relative;
-    margin-top: -150px;
+    margin-top: -10vw;
     /* min-width: 500px; */
     z-index: -1;
     overflow: hidden;
@@ -560,7 +593,11 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 20%;
+    /* min-width: 20%; */
+}
+
+.slider-two-button-nav.right-scroll-button {
+    margin-left: 1vw;
 }
 
 .slider-two {
@@ -591,7 +628,7 @@ h2 {
 }
 
 .slider-two-button-nav {
-    min-width: 1.5vw;
+    min-width: 20px;
 }
 
 .slider-two-button-nav:hover {
@@ -674,10 +711,11 @@ h2 {
     margin-right: 2.5vw;
 }
 
-.slaider-two-element-image {
+.slaider-two-element-image, .slaider-two-element-name, .slaider-two-element-price, .slaider-two-element-teammate {
     width: 23.6vw;
     height: auto;
 }
+
 
 .slaider-two-element-image-tag {
     position: absolute;
@@ -719,6 +757,7 @@ h2 {
     letter-spacing: 0px;
     color: #0E1735;
     margin-top: 24px;
+    
 }
 
 .slaider-two-element-price {
@@ -1152,6 +1191,12 @@ h2 {
     align-items: center;
     margin-left: 2.9vw;
     transition: 1s;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0px;
+
 }
 
 .block-three-call-button:hover {
@@ -1723,14 +1768,15 @@ footer {
 }
 
 .footer-container-one-links {
-    width: 35%;
+    /* width: 35%; */
     min-width: 100px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .footer-container-one-links a {
     min-width: 20px;
+    margin-right: 20px;
 }
 
 
@@ -1771,7 +1817,7 @@ footer {
 .color-spot-two1 {
     position: absolute;
     margin-top: -150px;
-    margin-left: 70vw;
+    right: 0;
     transform: scale(1.2);
 
 }
@@ -1838,15 +1884,7 @@ footer {
 
 /* ----------------- Adaptability rules ----------------- */
 
-header .company-logo {
-    width: 50%;
-}
 
-header .header-links {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
 
 
 @media screen and (max-width: 1400px) {
@@ -1958,10 +1996,15 @@ header .header-links {
 
     .slaider-two-filters {
         justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 12px;
     }
+    
 
     .slider-two-button {
         margin-right: 12px;
+        
     }
     
     .slaider-two-nav-arrows {
@@ -2087,7 +2130,7 @@ header .header-links {
         top: 78%;
     }
 
-    .slaider-two-element-image {
+    .slaider-two-element-image, .slaider-two-element-name, .slaider-two-element-price, .slaider-two-element-teammate  {
         width: 32vw;
     }
 
@@ -2191,7 +2234,7 @@ header .header-links {
     }
 
 
-    .slaider-two-element-image {
+    .slaider-two-element-image, .slaider-two-element-name, .slaider-two-element-price, .slaider-two-element-teammate  {
         width: 55vw;
     }
 
@@ -2288,7 +2331,7 @@ header .header-links {
     }
 
 
-    .slaider-two-element-image {
+    .slaider-two-element-image, .slaider-two-element-name, .slaider-two-element-price, .slaider-two-element-teammate  {
         width: 84vw;
     }
 
@@ -2484,6 +2527,10 @@ header .header-links {
 
     }
 
+    .block-one-left-part-search-button {
+        min-width: 40px;
+    }
+
     .block-one-left-part-search input::placeholder {
         font-size: 12px;
     }
@@ -2616,8 +2663,10 @@ header .header-links {
 #popup-container {
     display: none;
     position: fixed;
-    top: 15%;
-    left: 20%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     width: 60vw;
     height: auto;
     z-index: 102;
@@ -2688,3 +2737,30 @@ header .header-links {
     opacity: .80;
     filter: alpha(opacity=80);
 } */
+
+
+
+/* .slider-one-element.slick-current {
+   transform: translate(100px);
+   margin-right: 100px;
+   margin-left: 100px;
+} */
+
+.slider-one {
+    /* padding-left: 35px; */
+}
+
+.slider-one-element {
+    /* margin-left: 10px; */
+}
+
+
+
+
+.non-selection {
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
