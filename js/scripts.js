@@ -1,12 +1,20 @@
 
+// ----------- Margin for banner image -----------
+
+window.addEventListener('DOMContentLoaded', getMarginForBanner);
+window.addEventListener('resize', getMarginForBanner);
+
+function getMarginForBanner() {
+  let headerHeight = document.getElementById("header").offsetHeight;
+  let correctMargin = headerHeight + 80;
 
 
-// let headerHeight = document.getElementById("header").offsetHeight;
-// let bannerMargin = document.getElementsByClassName("block-one-right-part-banner-container")[0].style.marginTop = "-"+headerHeight+"px";
-
-// console.log(headerHeight);
-
-
+  if (window.innerWidth >= 1300) {
+    document.getElementsByClassName("block-one-right-part-banner-container")[0].style.marginTop = "-"+correctMargin+"px";
+  } else {
+    document.getElementsByClassName("block-one-right-part-banner-container")[0].style.marginTop = "50px";
+  }
+}
 
 
 // ----------- Sliders -----------
